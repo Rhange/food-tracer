@@ -103,7 +103,10 @@ const handleCompleteClick = (e) => {
   e.preventDefault();
   dailyObj.time = showTime();
   saveLocalStorage();
+
   waterArr.map((each) => each.classList.remove("filled"));
+
+  lists.innerText = "";
 };
 
 const showDate = () => {
