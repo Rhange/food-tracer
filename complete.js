@@ -44,7 +44,7 @@ const showData = (array) => {
     const delRecord = document.createElement("button");
     delRecord.innerText = "삭제";
     delRecord.addEventListener("click", handleDelClick);
-    delRecord.addEventListener("touchstart", handleDelClick);
+    delRecord.addEventListener("touchstart", handleDelClick, false);
     box.appendChild(delRecord);
     container.appendChild(box);
   });
