@@ -77,7 +77,6 @@ const showFoods = (dailyObj) => {
     delBtn.style.color = "#e74c3c";
     list.appendChild(delBtn);
     delBtn.addEventListener("click", handleDeleteClick);
-    delBtn.addEventListener("touchstart", handleDeleteClick, false);
     foodName.innerText = ` ${food}`;
     foodName.style.lineHeight = "1.5";
     list.appendChild(foodName);
@@ -155,18 +154,15 @@ const init = () => {
   if (waterArr) {
     waterArr.forEach((each) => {
       each.addEventListener("click", handleWaterClick);
-      each.addEventListener("touchstart", handleWaterClick, false);
     });
   }
 
   if (addBtn) {
     addBtn.addEventListener("click", handleAddClick);
-    addBtn.addEventListener("touchstart", handleAddClick, false);
   }
 
   if (completeBtn) {
     completeBtn.addEventListener("click", handleCompleteClick);
-    completeBtn.addEventListener("touchstart", handleCompleteClick, false);
   }
 
   if (currentDate) {
@@ -179,7 +175,6 @@ const init = () => {
 
   if (option) {
     option.addEventListener("change", handleOptionClick);
-    option.addEventListener("touchstart", handleOptionClick, false);
   }
 };
 
