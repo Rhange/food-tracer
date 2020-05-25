@@ -106,7 +106,7 @@ const handleCompleteClick = (e) => {
 
   waterArr.map((each) => each.classList.remove("filled"));
 
-  lists.innerText = "";
+  lists.innerHTML = "";
 };
 
 const showDate = () => {
