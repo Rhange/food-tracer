@@ -9,8 +9,9 @@ const saveAllRecord = () => {
 const updateAllRecord = () => {
   const loadDailyData = localStorage.getItem("daily");
   const loadAllData = localStorage.getItem("all");
-  allRecord = JSON.parse(loadAllData);
-
+  if (loadAllData) {
+    allRecord = JSON.parse(loadAllData);
+  }
   if (loadDailyData) {
     const parsedData = JSON.parse(loadDailyData);
     allRecord.push(parsedData);
@@ -62,6 +63,7 @@ const init = () => {
     updateAllRecord();
     saveAllRecord();
   }
+
   loadAllRecord();
 };
 
