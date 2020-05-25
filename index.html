@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/7a20ba7db5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Form | Food tracer</title>
+  </head>
+  <body>
+    <h1>음식 기록 노트 (등록)</h1>
+    <div class="container-form container">
+      <form class="food-form">
+        <div class="food-container">
+          <label for="food">먹은 음식</label>
+          <input type="text" class="food" required />
+          <button class="add-food">추가</button>
+        </div>
+        <div class="food-container">
+          <p class="date">2020-05-25 Mon</p>
+          <p class="time">00:00:00</p>
+          <select class="select">
+            <option value="간식">간식</option>
+            <option value="아침">아침</option>
+            <option value="점심">점심</option>
+            <option value="저녁">저녁</option>
+          </select>
+          <button type="submit" class="complete">완료</button>
+        </div>
+      </form>
+    </div>
+    <h2>물 마시기</h2>
+    <div class="container-water container">
+      <i class="fas fa-tint fa-2x water" id="water-1"></i>
+      <i class="fas fa-tint fa-2x water" id="water-2"></i>
+      <i class="fas fa-tint fa-2x water" id="water-3"></i>
+      <i class="fas fa-tint fa-2x water" id="water-4"></i>
+      <i class="fas fa-tint fa-2x water" id="water-5"></i>
+      <i class="fas fa-tint fa-2x water" id="water-6"></i>
+    </div>
+    <h3><i class="fas fa-tint"></i> = 330 ml</h3>
+    <nav class="nav">
+      <ul class="nav__lists">
+        <li class="nav__list" id="active">
+          <a href="index.html">
+            <i class="fab fa-dailymotion fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__list">
+          <a href="list.html">
+            <i class="far fa-clipboard fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <script src="script.js"></script>
+  </body>
+</html>

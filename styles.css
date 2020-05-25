@@ -1,0 +1,128 @@
+@import "reset.css";
+
+:root {
+  --water-color: #1e90ff;
+  --nav-color: #ffa502;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ecf0f1;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100vw;
+  height: 100%;
+  margin-top: 30px;
+  padding: 0px 10px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.food-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.food-container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-container label {
+  margin-bottom: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.food-container ul {
+  margin-top: 20px;
+}
+
+.container .food-container:last-child {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+  border-bottom: 1px solid var(--water-color);
+  border-top: 1px solid var(--water-color);
+  padding: 25px 0px;
+}
+
+.food-container:last-child select {
+  width: 50%;
+}
+
+.food-container:last-child button {
+  all: unset;
+  padding: 15px 0px;
+  width: 80%;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: var(--water-color);
+  color: white;
+}
+
+h2 {
+  color: #1e90ff;
+  font-size: 18px;
+  font-weight: 550;
+  margin-top: 10px;
+}
+
+.container-water {
+  margin: 30px 0px;
+}
+
+.container-water i {
+  margin-right: 5px;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+h3 {
+  color: #1e90ff;
+}
+
+.nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #2f3640;
+  height: 70px;
+}
+
+.nav .nav__lists {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.nav__lists i {
+  color: white;
+  cursor: pointer;
+}
+
+.nav__lists i:hover {
+  color: var(--water-color);
+}
+
+.filled.water {
+  opacity: 1;
+  color: var(--water-color);
+}
+
+.complete-container li {
+  margin-bottom: 10px;
+}
