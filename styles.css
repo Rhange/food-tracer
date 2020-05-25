@@ -62,6 +62,7 @@ h1 {
 
 .food-container:last-child select {
   width: 50%;
+  cursor: pointer;
 }
 
 .food-container:last-child button {
@@ -72,6 +73,7 @@ h1 {
   border-radius: 10px;
   background-color: var(--water-color);
   color: white;
+  cursor: pointer;
 }
 
 h2 {
