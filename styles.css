@@ -16,8 +16,9 @@ body {
   flex-direction: column;
   align-items: center;
   max-width: 100vw;
-  height: 100%;
+  height: 110%;
   margin-top: 30px;
+  margin-bottom: 80px;
   padding: 0px 10px;
 }
 
@@ -95,11 +96,11 @@ h3 {
 }
 
 .nav {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: #2f3640;
-  height: 70px;
+  height: 60px;
 }
 
 .nav .nav__lists {
