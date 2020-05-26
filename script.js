@@ -9,6 +9,7 @@ const currentDate = document.querySelector(".date");
 const currentTime = document.querySelector(".time");
 const option = document.querySelector(".select");
 const completeBtn = document.querySelector(".complete");
+const badBtn = document.querySelector(".js-bad");
 
 let allOfList = [];
 let waterCounter = 0;
@@ -17,7 +18,9 @@ let dailyObj = {
   date: "",
   time: "",
   water: "",
-  option: ""
+  option: "",
+  bad: 0,
+  id: 0
 };
 
 const loadLocalStorage = () => {
@@ -102,6 +105,8 @@ const handleAddClick = (e) => {
 const handleCompleteClick = (e) => {
   e.preventDefault();
   dailyObj.time = showTime();
+  const newId = new Date().getTime();
+  dailyObj.id = newId;
   saveLocalStorage();
 
   waterArr.map((each) => each.classList.remove("filled"));
@@ -151,6 +156,10 @@ const handleOptionClick = (e) => {
   dailyObj.option = selectValue;
 };
 
+const handleBadClick = (e) => {
+  dailyObj.bad = e.target.value;
+};
+
 const init = () => {
   loadLocalStorage();
 
@@ -178,6 +187,10 @@ const init = () => {
 
   if (option) {
     option.addEventListener("change", handleOptionClick);
+  }
+
+  if (badBtn) {
+    badBtn.addEventListener("change", handleBadClick);
   }
 };
 
