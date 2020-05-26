@@ -2,7 +2,7 @@
 
 :root {
   --water-color: #1e90ff;
-  --nav-color: #ffa502;
+  --bad-color: #ffa502;
 }
 
 * {
@@ -128,4 +128,41 @@ h3 {
 
 .complete-container li {
   margin-bottom: 10px;
+}
+
+h4 {
+  width: 70%;
+  text-align: center;
+  color: var(--bad-color);
+  padding-top: 30px;
+  margin: 30px 0px;
+  border-top: 1px solid var(--bad-color);
+}
+
+.bad {
+  width: 25%;
+  text-align: center;
+  padding: 5px 0px;
+  font-weight: bold;
+}
+
+/*
+list.html css
+*/
+
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-del {
+  all: unset;
+  background-color: var(--water-color);
+  color: white;
+  font-size: 14px;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px 0px;
+  border-radius: 5px;
+  text-align: center;
 }
