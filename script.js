@@ -9,10 +9,12 @@ const currentDate = document.querySelector(".date");
 const currentTime = document.querySelector(".time");
 const option = document.querySelector(".select");
 const completeBtn = document.querySelector(".complete");
-const badBtn = document.querySelector(".js-bad");
+const pooNodeList = document.querySelectorAll(".poo");
+const pooArr = Array.from(pooNodeList);
 
 let allOfList = [];
 let waterCounter = 0;
+let pooCounter = 0;
 let dailyObj = {
   foods: [],
   date: "",
@@ -60,7 +62,7 @@ const handleWaterClick = (e) => {
 const handleDeleteClick = (e) => {
   e.preventDefault();
   const li = e.target.parentNode;
-  const liFoodName = li.innerText.slice(1);
+  const liFoodName = li.innerText.slice(2);
   lists.removeChild(li);
 
   dailyObj.foods = dailyObj.foods.filter((food) => food !== liFoodName);
@@ -156,8 +158,20 @@ const handleOptionClick = (e) => {
   dailyObj.option = selectValue;
 };
 
-const handleBadClick = (e) => {
-  dailyObj.bad = e.target.value;
+const handlePooClick = (e) => {
+  const {
+    target: { classList }
+  } = e;
+  classList.toggle("filled");
+
+  const pooArr = Array.from(e.target.classList);
+  if (pooArr.includes("filled")) {
+    pooCounter++;
+  } else {
+    pooCounter--;
+  }
+  console.log(pooCounter);
+  dailyObj.bad = pooCounter;
 };
 
 const init = () => {
@@ -189,8 +203,10 @@ const init = () => {
     option.addEventListener("change", handleOptionClick);
   }
 
-  if (badBtn) {
-    badBtn.addEventListener("change", handleBadClick);
+  if (pooArr) {
+    pooArr.forEach((each) => {
+      each.addEventListener("click", handlePooClick);
+    });
   }
 };
 

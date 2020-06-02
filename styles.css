@@ -58,6 +58,7 @@ h1 {
   border-bottom: 1px solid var(--water-color);
   border-top: 1px solid var(--water-color);
   padding: 25px 0px;
+  width: 100%;
 }
 
 .food-container:last-child select {
@@ -126,12 +127,17 @@ h3 {
   color: var(--water-color);
 }
 
+.filled.poo {
+  opacity: 1;
+  color: var(--bad-color);
+}
+
 .complete-container li {
   margin-bottom: 10px;
 }
 
 h4 {
-  width: 70%;
+  width: 40%;
   text-align: center;
   color: var(--bad-color);
   padding-top: 30px;
@@ -139,11 +145,16 @@ h4 {
   border-top: 1px solid var(--bad-color);
 }
 
-.bad {
-  width: 25%;
-  text-align: center;
-  padding: 5px 0px;
-  font-weight: bold;
+.container-poo {
+  width: 220px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-poo i {
+  opacity: 0.4;
+  cursor: pointer;
+  font-size: 28px;
 }
 
 /*
