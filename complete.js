@@ -17,6 +17,10 @@ const updateAllRecord = () => {
   localStorage.setItem("all", JSON.stringify(allRecord));
 };
 
+const saveAllRecord = () => {
+  localStorage.setItem("all", JSON.stringify(allRecord));
+};
+
 const handleDelClick = (e) => {
   const box = e.target.parentNode;
   const parent = box.parentNode;
@@ -25,7 +29,7 @@ const handleDelClick = (e) => {
   parent.removeChild(box);
 
   // delete box info from allRecord array
-  allRecord.filter((each) => each.id !== box.id);
+  allRecord = allRecord.filter((each) => each.id !== Number(box.id));
 
   // update localStorage
   saveAllRecord();

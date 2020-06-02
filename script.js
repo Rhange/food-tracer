@@ -79,7 +79,7 @@ const showFoods = (dailyObj) => {
     const foodName = document.createElement("span");
     delBtn.innerText = "✖";
     delBtn.style.all = "unset";
-    delBtn.style.color = "#e74c3c";
+    delBtn.style.color = "red";
     list.appendChild(delBtn);
     delBtn.addEventListener("click", handleDeleteClick);
     foodName.innerText = ` ${food}`;
