@@ -11,6 +11,7 @@ const option = document.querySelector(".select");
 const completeBtn = document.querySelector(".complete");
 const pooNodeList = document.querySelectorAll(".poo");
 const pooArr = Array.from(pooNodeList);
+const alarm = document.querySelector(".js-alarm");
 
 let allOfList = [];
 let waterCounter = 0;
@@ -112,8 +113,16 @@ const handleCompleteClick = (e) => {
   saveLocalStorage();
 
   waterArr.map((each) => each.classList.remove("filled"));
-
+  pooArr.map((each) => each.classList.remove("filled"));
   lists.innerHTML = "";
+  option.value = "";
+
+  if (Array.from(alarm.classList).includes("alarm-effect")) {
+    alarm.classList.remove("alarm-effect");
+    alarm.classList.add("alarm-effect");
+  } else {
+    alarm.classList.add("alarm-effect");
+  }
 };
 
 const showDate = () => {
